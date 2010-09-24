@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Conference Timer</title> 
+<script language="JavaScript">
+	var popUpsBlocked = false;
+	var minutes = <%=@minutes%>;
+	TargetDate = new Date().valueOf() + 24*60*60*1000*0 + 0*60*60*1000 + minutes*6*10000; 
+	BackColor = "palegreen";
+	ForeColor = "navy";
+	CountActive = true;
+	CountStepper = -1;
+	LeadingZero = true;
+	DisplayFormat = "%%M%% Minutes <br/> %%S%% Seconds";
+	FinishMessage = "<span style='background-color:red;color:white;'>TIME HAS EXPIRED!</span>";	
+</script>
+</head>
+
+<body style="margin:0">
+
+<%= yield %>
+
+</body>
+</html>
